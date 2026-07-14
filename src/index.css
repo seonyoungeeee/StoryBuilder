@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(32,36,43,0.06) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background: #F5B942;
+    color: #20242B;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #3C5A78;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Sprocket-hole strip used to frame storyboard scenes like film stock */
+  .sprocket-strip {
+    background-image: repeating-linear-gradient(
+      to right,
+      #20242B 0px,
+      #20242B 10px,
+      transparent 10px,
+      transparent 22px
+    );
+    height: 6px;
+    border-radius: 3px;
+    opacity: 0.85;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
