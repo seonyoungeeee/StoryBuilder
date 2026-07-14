@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { Download, PenLine } from 'lucide-react'
+import { Download, Home, PenLine } from 'lucide-react'
 import { Layout } from '@/components/Layout'
 import { Button } from '@/components/ui/button'
 import { StoryboardDocument } from '@/components/StoryboardDocument'
@@ -47,6 +47,10 @@ export function Complete() {
           <Button size="lg" variant="outline" onClick={() => goTo('intro-writing')}>
             <PenLine className="h-4 w-4" />
             내 작품 소개하기
+          </Button>
+          <Button size="lg" variant="ghost" onClick={() => goTo('welcome')}>
+            <Home className="h-4 w-4" />
+            처음으로
           </Button>
         </div>
       </div>
