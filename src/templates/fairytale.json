@@ -1,0 +1,26 @@
+{
+  "id": "fairytale",
+  "title": "동화",
+  "emoji": "🧚",
+  "description": "주인공의 모험과 교훈이 담긴 동화를 만들어요.",
+  "questions": [
+    { "id": 1, "question": "이야기의 주인공은 누구인가요?", "helper": "사람, 동물, 사물 무엇이든 좋아요." },
+    { "id": 2, "question": "주인공이 사는 곳은 어떤 곳인가요?" },
+    { "id": 3, "question": "주인공에게 어떤 소원이나 목표가 있나요?" },
+    { "id": 4, "question": "그 소원을 이루기 위해 어떤 모험을 떠나나요?" },
+    { "id": 5, "question": "모험 중 만나는 어려움은 무엇인가요?" },
+    { "id": 6, "question": "누가 주인공을 도와주나요?" },
+    { "id": 7, "question": "이야기는 어떻게 끝나나요?" },
+    { "id": 8, "question": "이 동화가 주는 교훈은 무엇인가요?" }
+  ],
+  "sceneMapping": [
+    { "scene": "주인공 소개", "questionId": 1 },
+    { "scene": "배경이 되는 세상", "questionId": 2 },
+    { "scene": "소원", "questionId": 3 },
+    { "scene": "모험의 시작", "questionId": 4 },
+    { "scene": "시련", "questionId": 5 },
+    { "scene": "도와주는 존재", "questionId": 6 },
+    { "scene": "결말", "questionId": 7 },
+    { "scene": "교훈", "questionId": 8 }
+  ]
+}

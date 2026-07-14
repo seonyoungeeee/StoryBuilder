@@ -1,0 +1,24 @@
+{
+  "id": "future",
+  "title": "미래의 나",
+  "emoji": "🔭",
+  "description": "10년 후의 나를 그려보며 지금의 나에게 하고 싶은 이야기를 정리해요.",
+  "questions": [
+    { "id": 1, "question": "지금의 나는 어떤 사람인가요?", "helper": "성격, 좋아하는 것, 잘하는 것을 자유롭게 적어보세요." },
+    { "id": 2, "question": "10년 후 나는 무엇을 하고 있을까요?" },
+    { "id": 3, "question": "그 모습이 되기 위해 지금 어떤 노력을 하고 있나요?" },
+    { "id": 4, "question": "그 과정에서 만나게 될 어려움은 무엇일까요?" },
+    { "id": 5, "question": "그 어려움을 어떻게 극복했을까요?" },
+    { "id": 6, "question": "미래의 나는 어떤 하루를 보내고 있을까요?" },
+    { "id": 7, "question": "미래의 나가 지금의 나에게 해주고 싶은 말은 무엇인가요?" }
+  ],
+  "sceneMapping": [
+    { "scene": "현재의 나", "questionId": 1 },
+    { "scene": "꿈꾸는 미래", "questionId": 2 },
+    { "scene": "준비하는 과정", "questionId": 3 },
+    { "scene": "마주친 어려움", "questionId": 4 },
+    { "scene": "극복의 순간", "questionId": 5 },
+    { "scene": "미래의 하루", "questionId": 6 },
+    { "scene": "나에게 보내는 메시지", "questionId": 7 }
+  ]
+}
