@@ -1,6 +1,7 @@
 import * as React from 'react'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, Home } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { useProjectStore } from '@/store/useProjectStore'
 
 interface LayoutProps {
   step?: number // 1-7, omit to hide the scene counter
@@ -11,6 +12,8 @@ interface LayoutProps {
 }
 
 export function Layout({ step, totalSteps = 7, onBack, children, wide = false }: LayoutProps) {
+  const goTo = useProjectStore((s) => s.goTo)
+
   return (
     <div className="min-h-screen flex flex-col">
       <header className="no-print border-b border-border/70">
@@ -29,11 +32,23 @@ export function Layout({ step, totalSteps = 7, onBack, children, wide = false }:
               STORYBOARD BUILDER
             </span>
           </div>
-          {step ? (
-            <span className="font-mono text-xs font-semibold tracking-widest text-slate">
-              SCENE {String(step).padStart(2, '0')} / {String(totalSteps).padStart(2, '0')}
-            </span>
-          ) : null}
+          <div className="flex items-center gap-3">
+            {step ? (
+              <span className="font-mono text-xs font-semibold tracking-widest text-slate">
+                SCENE {String(step).padStart(2, '0')} / {String(totalSteps).padStart(2, '0')}
+              </span>
+            ) : null}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => goTo('welcome')}
+              aria-label="처음 화면으로 돌아가기"
+              className="text-ink-faint hover:text-ink"
+            >
+              <Home className="h-4 w-4" />
+              처음으로
+            </Button>
+          </div>
         </div>
         {step ? (
           <div className="flex w-full">
